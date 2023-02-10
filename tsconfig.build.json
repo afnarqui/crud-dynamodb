@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig",
+    "exclude": [
+      "coverage",
+      "jest",
+      "tests",
+      "**.js"
+    ]
+  }
+  

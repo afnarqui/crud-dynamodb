@@ -1,0 +1,34 @@
+service: hello
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - "dynamodb:Scan"
+        - "dynamodb:PutItem"
+        - "dynamodb:Query"
+        - "dynamodb:GetItem"
+      Resource: '*'
+
+functions:
+  hello:
+    handler: src/index.handler
+    events:
+      - httpApi: GET /hello
+  save:
+    handler: src/index.save
+    events:
+      - httpApi: POST /save
+
+custom:
+  esbuild:
+    bundle: true
+    minify: true
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline

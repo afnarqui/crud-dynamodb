@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+      "target": "ES2019",
+      "module": "commonjs",
+      "declaration": true,
+      "outDir": "./lib",
+      "strict": true,
+      "baseUrl": "./",
+      "types": [
+        "node",
+        "jest"
+      ],
+      "esModuleInterop": true,
+      "inlineSourceMap": true,
+      "resolveJsonModule": true,
+      "allowJs": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "lib": [
+        "ES2020"
+      ]
+    }
+  }
+  
+  // {
+  //   "compilerOptions": {
+  //     "preserveConstEnums": true,
+  //     "strictNullChecks": true,
+  //     "sourceMap": true,
+  //     "allowJs": true,
+  //     "target": "es5",
+  //     "outDir": ".build",
+  //     "moduleResolution": "node",
+  //     "lib": ["es2015"],
+  //     "rootDir": "./"
+  //   }
+  // }
+  
